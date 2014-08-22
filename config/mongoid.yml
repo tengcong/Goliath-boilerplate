@@ -1,0 +1,7 @@
+development:
+  sessions:
+    default:
+      database: test
+      hosts:
+        - localhost:27017
+
