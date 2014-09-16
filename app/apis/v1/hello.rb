@@ -20,13 +20,9 @@ class APIv1
         render_custom "api_v1/hello/show", params[:id], 200
       end
 
-      get '/destroy_all' do
+      get '/yo/destroy_all' do
         Hi.destroy_all
         {success: true}
-      end
-
-      get '/count' do
-        {count: Hi.count}
       end
 
       post '/create' do
