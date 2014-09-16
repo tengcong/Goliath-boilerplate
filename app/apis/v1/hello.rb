@@ -20,6 +20,11 @@ class APIv1
         render_custom "api_v1/hello/show", params[:id], 200
       end
 
+      get '/destroy_all' do
+        Hi.destroy_all
+        {success: true}
+      end
+
       post '/create' do
         if hi = Hi.create(name: params[:name])
           {success: true, data: hi, count: Hi.count}
