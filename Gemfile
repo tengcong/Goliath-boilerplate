@@ -11,5 +11,7 @@ gem 'grape'
 gem 'goliath'
 gem 'rabl'
 
+gem 'oj'
+
 # debug
 gem 'pry'

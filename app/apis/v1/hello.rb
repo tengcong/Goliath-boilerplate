@@ -6,7 +6,9 @@ class APIv1
     resource 'hello' do
 
       get '/test' do
-        'success'
+        Hi.create name: 'test'
+        hi = Hi.last
+        hi
       end
 
       get "/" do
@@ -19,7 +21,7 @@ class APIv1
       end
 
       post '/create' do
-        if hi = Hi.create name: params[:name]
+        if hi = Hi.create(name: params[:name])
           {success: true, data: hi, count: Hi.count}
         else
           {success: false}
