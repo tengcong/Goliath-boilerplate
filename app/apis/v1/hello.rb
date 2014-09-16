@@ -25,6 +25,10 @@ class APIv1
         {success: true}
       end
 
+      get '/count' do
+        {count: Hi.count}
+      end
+
       post '/create' do
         if hi = Hi.create(name: params[:name])
           {success: true, data: hi, count: Hi.count}
